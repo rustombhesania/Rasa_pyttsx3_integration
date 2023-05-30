@@ -1,0 +1,22 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+# new custom action added in rules.yml
+
+- rule: Trigger TTS Action
+  steps:
+  - intent: greet
+  - action: action_text_to_speech
+  
+
